@@ -16,7 +16,97 @@
 </header>
 
 <main><section class="page-hero"><div class="container"><div class="eyebrow">Volunteer with us</div><h1>Give your time to a meaningful cause.</h1><p>Tell us how you would like to contribute to community initiatives.</p></div></section>
-<section class="section"><div class="container"><div class="form-card"><h2>Volunteer registration</h2><p class="help">This sample form does not send or store your details.</p><form data-demo-form><div class="form-grid"><div class="field"><label for="name">Full name</label><input id="name" required></div><div class="field"><label for="email">Email</label><input id="email" type="email" required></div><div class="field"><label for="phone">Phone</label><input id="phone" type="tel" placeholder="+256"></div><div class="field"><label for="interest">Interest</label><select id="interest" required><option value="">Select</option><option>Education</option><option>Community outreach</option><option>Administration</option><option>Fundraising</option></select></div><div class="field full"><label for="skills">Skills and availability</label><textarea id="skills" required></textarea></div></div><button class="btn" type="submit">Submit interest</button><p class="form-message notice" hidden role="status"></p></form></div></div></section></main>
+<section class="section">
+  <div class="container">
+    <div class="form-card">
+
+      <h2>Volunteer registration</h2>
+
+      <p class="help">
+        Complete this form to express your interest in volunteering
+        with Light of Hope Organisation.
+      </p>
+
+      <form data-google-form data-form-type="volunteer">
+
+        <div class="form-grid">
+
+          <!-- Full Name -->
+          <div class="field">
+            <label for="name">Full name</label>
+            <input
+              id="name"
+              name="fullName"
+              type="text"
+              required
+            >
+          </div>
+
+          <!-- Email -->
+          <div class="field">
+            <label for="email">Email</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              required
+            >
+          </div>
+
+          <!-- Phone -->
+          <div class="field">
+            <label for="phone">Phone</label>
+            <input
+              id="phone"
+              name="phone"
+              type="tel"
+              placeholder="+256"
+            >
+          </div>
+
+          <!-- Interest -->
+          <div class="field">
+            <label for="interest">Interest</label>
+            <select
+              id="interest"
+              name="interest"
+              required
+            >
+              <option value="">Select</option>
+              <option>Education</option>
+              <option>Community outreach</option>
+              <option>Administration</option>
+              <option>Fundraising</option>
+            </select>
+          </div>
+
+          <!-- Skills and Availability -->
+          <div class="field full">
+            <label for="skills">Skills and availability</label>
+            <textarea
+              id="skills"
+              name="skills"
+              required
+            ></textarea>
+          </div>
+
+        </div>
+
+        <button class="btn" type="submit">
+          Submit interest
+        </button>
+
+        <p
+          class="form-message notice"
+          hidden
+          role="status"
+        ></p>
+
+      </form>
+
+    </div>
+  </div>
+</section>
 
 <footer class="site-footer">
   <div class="container">
