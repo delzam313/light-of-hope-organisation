@@ -13,7 +13,66 @@ document.addEventListener("DOMContentLoaded", () => {
     el.textContent = new Date().getFullYear();
   });
 
-  document.querySelectorAll("form[data-demo-form]").forEach(form => {
+ // Google Sheets form submission
+document.querySelectorAll("form[data-google-form]").forEach(form => {
+  form.addEventListener("submit", async event => {
+    event.preventDefault();
+
+    const message = form.querySelector(".form-message");
+    const submitButton = form.querySelector('button[type="submit"]');
+
+    const GOOGLE_SCRIPT_URL = "PASTE_YOUR_GOOGLE_SCRIPT_URL_HERE";
+
+    const formData = new FormData(form);
+    formData.append("formType", form.dataset.formType);
+
+    if (submitButton) {
+      if (!submitButton.dataset.originalText) {
+        submitButton.dataset.originalText =
+          submitButton.textContent.trim();
+      }
+
+      submitButton.disabled = true;
+      submitButton.textContent = "Submitting...";
+    }
+
+    if (message) {
+      message.hidden = true;
+    }
+
+    try {
+      await fetch(GOOGLE_SCRIPT_URL, {
+        method: "POST",
+        body: new URLSearchParams(formData),
+        mode: "no-cors"
+      });
+
+      if (message) {
+        message.textContent =
+          "Thank you! Your submission has been sent.";
+        message.hidden = false;
+      }
+
+      form.reset();
+
+    } catch (error) {
+      console.error("Submission error:", error);
+
+      if (message) {
+        message.textContent =
+          "Submission failed. Please try again.";
+        message.hidden = false;
+      }
+
+    } finally {
+      if (submitButton) {
+        submitButton.disabled = false;
+        submitButton.textContent =
+          submitButton.dataset.originalText;
+      }
+    }
+  });
+});{
     form.addEventListener("submit", event => {
       event.preventDefault();
       const message = form.querySelector(".form-message");
