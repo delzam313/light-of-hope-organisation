@@ -17,7 +17,69 @@
 
 <main><section class="page-hero"><div class="container"><div class="eyebrow">Contact</div><h1>We would be glad to hear from you.</h1><p>Contact us about volunteering, partnerships, community programmes or general enquiries.</p></div></section>
 <section class="section"><div class="container split"><div><h2>Get in touch</h2><p>Replace the placeholders below with verified organisational contact details before publishing.</p><ul class="check-list"><li><strong>Location:</strong> Uganda (add district and address)</li><li><strong>Email:</strong> add your official email address</li><li><strong>Telephone:</strong> add your official phone number</li></ul><div class="notice">Do not publish a personal address or phone number without the owner's permission.</div></div>
-<div class="form-card"><h2>Send an enquiry</h2><form data-demo-form><div class="field"><label for="cname">Full name</label><input id="cname" required></div><div class="field"><label for="cemail">Email address</label><input id="cemail" type="email" required></div><div class="field"><label for="subject">Subject</label><select id="subject"><option>General enquiry</option><option>Volunteering</option><option>Partnership</option><option>Programme information</option></select></div><div class="field"><label for="cmessage">Message</label><textarea id="cmessage" required></textarea></div><button class="btn" type="submit">Send message</button><p class="form-message notice" hidden role="status"></p></form></div></div></section></main>
+<div class="form-card">
+  <h2>Send an enquiry</h2>
+
+  <form data-google-form data-form-type="contact">
+
+    <!-- Full Name -->
+    <div class="field">
+      <label for="cname">Full name</label>
+      <input
+        id="cname"
+        name="fullName"
+        type="text"
+        required
+      >
+    </div>
+
+    <!-- Email -->
+    <div class="field">
+      <label for="cemail">Email address</label>
+      <input
+        id="cemail"
+        name="email"
+        type="email"
+        required
+      >
+    </div>
+
+    <!-- Subject -->
+    <div class="field">
+      <label for="subject">Subject</label>
+      <select id="subject" name="subject" required>
+        <option value="">Select a subject</option>
+        <option>General enquiry</option>
+        <option>Volunteering</option>
+        <option>Partnership</option>
+        <option>Programme information</option>
+      </select>
+    </div>
+
+    <!-- Message -->
+    <div class="field">
+      <label for="cmessage">Message</label>
+      <textarea
+        id="cmessage"
+        name="message"
+        required
+      ></textarea>
+    </div>
+
+    <!-- Submit Button -->
+    <button class="btn" type="submit">
+      Send message
+    </button>
+
+    <!-- Submission Feedback -->
+    <p
+      class="form-message notice"
+      hidden
+      role="status"
+    ></p>
+
+  </form>
+</div>
 
 <footer class="site-footer">
   <div class="container">
