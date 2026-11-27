@@ -20,7 +20,7 @@ document.querySelectorAll("form[data-google-form]").forEach(form => {
 
     const message = form.querySelector(".form-message");
     const submitButton = form.querySelector('button[type="submit"]');
-    const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwHJnI9dWPtM3XCDJp5IxflqDaDhoTifRIv67Jxo0tq5CIccGoOwhWQgKLn5H_nn8Ra/exec";
+    const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwvtzWUCAWTMhLFp_6rd3LZ80JXjNxGmlW2IwrMJ5WahKJo_L7tMg-UnFsEu8tOsqQp/exec";
 
     const formData = new FormData(form);
     formData.append("formType", form.dataset.formType);
