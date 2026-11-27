@@ -122,3 +122,4 @@ th { background: #fff2e8; color: #542a0e; }
   .gallery-grid img { height: 220px; }
   .dashboard-main { padding: 20px 4%; }
 }
+.brand-logo { width: 56px; height: 56px; flex-shrink: 0; object-fit: contain; background: #fff; border-radius: 10px; padding: 2px; }
