@@ -217,3 +217,18 @@ input:focus, textarea:focus, select:focus { border-color: var(--navy); box-shado
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
 .section-heading .btn { margin-top: 22px; }
+
+/* Bigger "Light of Hope" name */
+.brand > span { font-size: 22px; font-weight: 900; white-space: nowrap; }
+.brand small { font-size: 11px; }
+@media (min-width: 901px) and (max-width: 1200px) {
+  .nav-links { gap: 10px; }
+  .nav-links a { font-size: 13px; }
+  .brand > span { display: block; font-size: 16px; }
+  .brand small { font-size: 8px; letter-spacing: 1px; }
+}
+@media (max-width: 420px) {
+  .brand { gap: 8px; }
+  .brand > span { font-size: 17px; }
+  .brand small { font-size: 9px; letter-spacing: 1px; }
+}
